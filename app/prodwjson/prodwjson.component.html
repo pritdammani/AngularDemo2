@@ -1,0 +1,49 @@
+<app-navigation></app-navigation>
+<h1>Products Table with Json </h1>
+<div class="center">
+  <input [(ngModel)]="searchText" placeholder="Search for products">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <label>Sort&nbsp;</label>
+  <select [(ngModel)]='SortbyParam' style="padding:5px;border-radius:10px;">
+    <option value="productId">id</option>
+    <option value="productName">Name</option>
+    <option value="productPrice">Price</option>
+  </select>
+  <!--<select [(ngModel)]='SortDirection'>
+    <option value="asc">asc</option>
+    <option value="desc">desc</option>
+  </select>-->
+  &nbsp;&nbsp;
+  <button type="button" (click)="onSortDirection()" class="btn btn-primary">
+    order
+    <i *ngIf="SortDirection==='asc'" class="fas fa-arrow-up"></i>
+    <i *ngIf="SortDirection==='desc'" class="fas fa-arrow-down"></i>
+  </button>
+</div>
+<table *ngIf="products.length!=0;else hide" class="center">
+  <tr>
+    <th>ProductID</th>
+    <th>ProductName</th>
+    <th>ProductPrice</th>
+    <th>ProductExpDate</th>
+    <th>ProductDescription</th>
+    <th>ProductImage</th>
+  </tr>
+  <tr *ngFor='let product of products|search:{productId: searchText, productName:searchText,productDescription: searchText}|sort:[SortbyParam,SortDirection]' appZoomd>
+    <td>{{product.productId}}</td>
+    <td>{{product.productName}}</td>
+    <td>{{product.productPrice| currency:'IND':true}}</td>
+    <td>{{product.productExpDate}}</td>
+    <td>{{product.productDescription}}</td>
+    <td>
+
+      <img [src]='product.prodImage'>
+
+    </td>
+  </tr>
+</table>
+<ng-template #hide>
+  <h1>No products to display</h1>
+</ng-template>
+<app-footer></app-footer>
+

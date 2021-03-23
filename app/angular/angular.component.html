@@ -1,0 +1,103 @@
+<!--<div class='container'>
+
+  <div id="header">
+    <div class="row">
+      <div class="col">
+        <div class="info-header mb-5">
+          <h1 class="text pb-3">
+            Login with Mizuxe!
+          </h1>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="card bg-light py-2">
+        <h2 class="card-title text-center mt-2 text-danger">
+          Login Now
+        </h2>
+
+        <article class="card-body mx-auto" style="width:50%;">
+
+          <form [formGroup]="userForm" (ngSubmit)='submitData(userForm.value)'>
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text bg-danger text-white"> <i class="fa fa-user"></i> </span>
+              </div>
+              <input formControlName='name' name='name' class='form-control bg-dark text-white' placeholder="Username">
+
+              <div *ngIf="userForm.get('name').errors?.required && userForm.get('name').touched " class='text text-danger'>Name is required </div>
+              <div *ngIf="userForm.get('name').errors?.pattern" class='text text-danger'>Name should be valid and Name should be 5 to 15 characters </div>
+            </div>--> <!-- form-group// -->
+
+            <!--<div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text bg-danger text-white"> <i class="fa fa-envelope"></i> </span>
+              </div>
+              <input formControlName="email" class="form-control bg-dark text-white" placeholder="Email address" type="email">
+
+              <div *ngIf="userForm.get('email').errors?.required && userForm.get('email').touched" class='text text-danger'>Email is required </div>
+              <div *ngIf="userForm.get('email').errors?.pattern" class='text text-danger'>Please Enter a valid Email</div>
+            </div>--> <!-- form-group// -->
+
+
+
+            <!--<div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text bg-danger text-white"> <i class="fa fa-lock"></i> </span>
+              </div>
+              <input formControlName="password" name="password" class="form-control bg-dark text-white" placeholder="Password" type="password">
+
+              <div *ngIf="userForm.get('password').errors?.required && userForm.get('password').touched" class='text text-danger'>Password is required </div>
+
+            </div>--> <!-- form-group// -->
+
+            <!--<div><button [disabled]='!userForm.valid' type='submit' class='btn btn-outline-danger '>Submit</button></div>
+
+          </form>
+        </article>
+      </div>
+      <br>--> <!-- card.// -->
+    <!--</div>-->
+    <br />
+    <html>
+    <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+    <body>
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <form [formGroup]="userForm" (ngSubmit)='submitData(userForm.value)' style="padding: 20px; background-color: cornflowerblue; color: white;">
+
+                <label for="name">User Name </label>
+
+                <input formControlName='email' name='email'  placeholder="Username" class="form-control">
+                <br />
+
+                <div *ngIf="userForm.get('email').errors?.required && userForm.get('email').touched " class='text text-danger'>Name is required </div>
+                <div *ngIf="userForm.get('email').errors?.pattern" class='text text-danger'>Name should be valid and Name should be 5 to 15 characters </div>
+                <br />
+                <label for="password">User Password </label>
+                <input formControlName="password" name="password"  placeholder="Password" type="password" class="form-control">
+
+                <div *ngIf="userForm.get('password').errors?.required && userForm.get('password').touched" class='text text-danger'>Password is required </div>
+
+                <br />
+
+                <div><button type='submit' class="btn btn-primary" style="width:100%">Submit</button></div>
+
+
+              </form>
+          </div>
+            <h2>{{errormsg}}</h2>
+          </div>
+          </div>
+        </div>
+
+</body>
+</html>

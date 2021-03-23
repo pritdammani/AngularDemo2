@@ -1,0 +1,42 @@
+[
+  {
+    "productId": 101,
+    "productName": "HP-Laptop",
+    "productDescription": "Good",
+    "productPrice": 30000,
+    "productExpDate": "26/01/2022",
+    "prodImage": "../assets/lll.jfif"
+  },
+  {
+    "productId": 102,
+    "productName": "DEll-Laptop",
+    "productDescription": "Good",
+    "productPrice": 30000,
+    "productExpDate": "26/01/2022",
+    "prodImage": "../assets/ll.jfif"
+  },
+  {
+    "productId": 103,
+    "productName": "HP-Charger",
+    "productDescription": "Good",
+    "productPrice": 2000,
+    "productExpDate": "26/01/2022",
+    "prodImage": "../assets/hc.jfif"
+  },
+  {
+    "productId": 104,
+    "productName": "HP-Laptop",
+    "productDescription": "Good",
+    "productPrice": 50000,
+    "productExpDate": "26/01/2022",
+    "prodImage": "../assets/lll.jfif"
+  },
+  {
+    "productId": 105,
+    "productName": "HP-Printer",
+    "productDescription": "Good",
+    "productPrice": 9000,
+    "productExpDate": "26/01/2022",
+    "prodImage": "../assets/pp.jfif"
+  }
+]

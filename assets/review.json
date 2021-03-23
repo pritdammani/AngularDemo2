@@ -1,0 +1,32 @@
+[
+  {
+    "rid": 201,
+    "review": "Good course for freshers",
+    "name": "Amey",
+    "manImage": "../assets/m1.jfif"
+  },
+  {
+    "rid": 202,
+    "review": "Good course for freshers and quality contents",
+    "name": "Lokesh",
+    "manImage": "../assets/m2.jfif"
+  },
+  {
+    "rid": 203,
+    "review": "Good course and problem solving",
+    "name": "Kaustubh",
+    "manImage": "../assets/m3.jfif"
+  },
+  {
+    "rid": 204,
+    "review": "course for freshers",
+    "name": "Rajat",
+    "manImage": "../assets/m1.jfif"
+  },
+  {
+    "rid": 205,
+    "review": "Good course for those who want to start",
+    "name": "Devanshu",
+    "manImage": "../assets/m2.jfif"
+  }
+]

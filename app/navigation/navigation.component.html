@@ -1,0 +1,45 @@
+<ul>
+  <!--<li style="float:right"><a routerLink='/home' routerLinkActive='active' class="active">Home</a></li>
+  <li style="float:right"><a routerLink='/review' routerLinkActive='active' class="active">Reviews</a></li>
+  <li style="float:right"><a routerLink='/technology' routerLinkActive='active' class="active">Tech </a></li>-->
+  <li> <h3 style="padding-top:10px;color:white;">{{'Get-Train'|translate}}</h3></li>
+  <li style="float:right;padding-top:10px;">
+    <i class="fa fa-globe" aria-hidden="true"></i>
+    <select #locale (change)="changeLocale(locale.value)">
+      <option selected=""> Select Language</option>
+      <option value="en">English</option>
+      <option value="fr">French</option>
+      <option value="hi">Hindi</option>
+    </select>
+
+
+
+
+  </li>
+  <li style="float:right;padding-top:10px;"><button routerLink='/login' routerLinkActive='active' class="btn btn-danger active">{{'Log-Out'|translate}}</button></li>
+  <li style="float:right"><a routerLink='/employee' routerLinkActive='active' class="active">{{'Employees'|translate}}</a></li>
+  <li style="float:right"><a routerLink='/products' routerLinkActive='active' class="active">{{'Products'|translate}}</a></li>
+  <li style="float:right"><a routerLink='/form' routerLinkActive='active' class="active">{{'Form'|translate}}</a></li>
+  <li style="float:right"><a routerLink='/model' routerLinkActive='active' class="active">{{'Model-Form'|translate}}</a></li>
+  <li style="float:right"><a routerLink='/build' routerLinkActive='active' class="active">{{'Form-Build'|translate}}</a></li>
+
+  <li style="float:right"><a routerLink='/technology' routerLinkActive='active' class="active">{{'Tech'|translate}} </a></li>
+  <li style="float:right"><a routerLink='/review' routerLinkActive='active' class="active">{{'Reviews'|translate}}</a></li>
+  <li style="float:right"><a routerLink='/home' routerLinkActive='active' class="active">{{'Home'|translate}}</a></li>
+</ul>
+<!--<h2>{{'hello' | translate}}</h2>-->
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a routerLink='/review' routerLinkActive='active' class="active">Reviews</a></li>
+      <li><a routerLink='/java' routerLinkActive='active' class="active">Technology</a></li>
+      <li><a routerLink='/java' routerLinkActive='active' class="active">Template</a></li>
+      <li><a routerLink='/java' routerLinkActive='active' class="active">Models</a></li>
+    </ul>
+  </div>
+</nav>-->

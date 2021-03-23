@@ -1,0 +1,39 @@
+[
+  {
+    "cid": 301,
+    "cImage": "../assets/css.jfif",
+
+    "cname": "HTML + CSS Basics",
+    "tname": "Sagar J",
+    "cduration": "One",
+    "cprice": 300
+  },
+  {
+    "cid": 302,
+    "cImage": "../assets/hcj.jfif",
+
+    "cname": "HTML + CSS +Js Basics",
+    "tname": "Hrishikesh T",
+    "cduration": "Two",
+    "cprice": 450
+  },
+  {
+    "cid": 303,
+    "cImage": "../assets/boot.jfif",
+
+    "cname": "Bootstrap 4",
+    "tname": "Ankush B",
+    "cduration": "One",
+    "cprice": 350
+  },
+  {
+    "cid": 304,
+    "cImage": "../assets/hcj.jfif",
+
+    "cname": "Angular 6",
+    "tname": "Prajwal S",
+    "cduration": "Two",
+    "cprice": 400
+  }
+
+]

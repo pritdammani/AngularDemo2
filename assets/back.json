@@ -1,0 +1,39 @@
+[
+  {
+    "cid": 401,
+    "cImage": "../assets/php.jfif",
+
+    "cname": "PHP + MYSQL",
+    "tname": "Raju",
+    "cduration": "One",
+    "cprice": 350
+  },
+  {
+    "cid": 402,
+    "cImage": "../assets/node.jfif",
+
+    "cname": "Node ",
+    "tname": "Jigar v",
+    "cduration": "Two",
+    "cprice": 450
+  },
+  {
+    "cid": 403,
+    "cImage": "../assets/django.jfif",
+
+    "cname": "Django",
+    "tname": "Rajesh B",
+    "cduration": "One",
+    "cprice": 350
+  },
+  {
+    "cid": 404,
+    "cImage": "../assets/asp.jfif",
+
+    "cname": "ASP .Net",
+    "tname": "Prajwal S",
+    "cduration": "Two",
+    "cprice": 400
+  }
+
+]

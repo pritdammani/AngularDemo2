@@ -1,0 +1,39 @@
+<app-navigation></app-navigation>
+<br />
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+<div class="card" style="width: 100%;">
+  <img class="card-img-top" src="../assets/fe.jfif" alt="Card image cap" style="width:100%;height:200px;">
+  <div class="card-body">
+    <h5 class="card-title">Front End Technology</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a [routerLink]='["front"]' routerLinkActive='active' class="btn btn-primary">See Courses</a>
+  </div>
+</div>
+</div>
+    <div class="col">
+      <div class="card" style="width: 100%;">
+        <img class="card-img-top" src="../assets/be.jfif" alt="Card image cap" style="width:100%;height:200px;">
+        <div class="card-body">
+          <h5 class="card-title">Back End Technology</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a [routerLink]='["back"]' routerLinkActive='active' class="btn btn-primary">See Courses</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:100%;">
+        <img class="card-img-top" src="../assets/ds.jfif" alt="Card image cap" style="width:100%;height:200px;">
+        <div class="card-body">
+          <h5 class="card-title">Data Science</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a [routerLink]='["core"]' routerLinkActive='active' class="btn btn-primary">See Courses</a>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

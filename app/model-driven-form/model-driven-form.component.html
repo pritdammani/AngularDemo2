@@ -1,0 +1,113 @@
+
+<app-navigation></app-navigation>
+<br />
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" style="padding: 20px; background-color: cornflowerblue; color: white;">
+            <div class='form-group' formGroupName="personalDetails">
+
+
+
+              <label for="firstname">First Name </label>
+              <input type="text" id="firstname" name="firstname" formControlName="firstname" class="form-control">
+              <br />
+              <div *ngIf="contactForm.get('personalDetails.firstname').hasError('required') && contactForm.get('personalDetails.firstname').touched" class='text text-danger'>FirstName is required </div>
+              <div *ngIf="contactForm.get('personalDetails.firstname').errors?.pattern" class='text text-danger'>Enter valid Firstname</div>
+
+
+              <label for="lastname">Last Name </label>
+              <input type="text" id="lastname" name="lastname" formControlName="lastname" class="form-control">
+              <br />
+              <div *ngIf="contactForm.get('personalDetails.lastname').hasError('required') && contactForm.get('personalDetails.lastname').touched" class='text text-danger'>LastName is required </div>
+              <div *ngIf="contactForm.get('personalDetails.lastname').errors?.pattern" class='text text-danger'>Enter valid Lastname</div>
+
+
+
+
+              <label for="email">Email </label>
+              <input type="text" id="email" name="email" formControlName="email" class="form-control">
+              <div *ngIf="contactForm.get('personalDetails.email').hasError('required') && contactForm.get('personalDetails.email').touched" class='text text-danger'>Email is required </div>
+              <div *ngIf="contactForm.get('personalDetails.email').errors?.pattern" class='text text-danger'>Enter valid email</div>
+              <br />
+
+
+
+              <label for="Profession">Profession </label>
+              <select id="profession" name="profession" formControlName="profession" class="form-control">
+                <option [ngValue]="c.name" *ngFor="let c of professionList">
+                  {{c.name}}
+                </option>
+              </select>
+
+
+
+              <br />
+            </div>
+
+
+
+            <label for="ratings">Give Ratings </label>&nbsp;&nbsp;
+            <input type="radio" value="Excellent" id="Excellent" name="ratings" formControlName="ratings">&nbsp;   Excellent
+            <input type="radio" value="Good" id="Good" name="ratings" formControlName="ratings">&nbsp;   Good
+            <input type="radio" value="Average" id="Average" name="ratings" formControlName="ratings">&nbsp;   Average
+            <input type="radio" value="Bad" id="Bad" name="ratings" formControlName="ratings">&nbsp;   Bad
+
+
+
+
+            <br /><br />
+            <input type="checkbox" id="yes" name="yes" formControlName="feedback">
+            <label for="feedback">Want to Learn More with us </label>
+
+
+
+            <br /><br />
+
+
+
+            <button [disabled]='!contactForm.valid' type="submit" class="btn btn-primary" style="width:100%;">Submit</button>
+
+          </form>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="container">
+          <table class=" table table-success table-hover center">
+            <tr *ngIf="myData.length>0;">
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Profession</th>
+              <th>Feedback</th>
+              <th>Ratings</th>
+
+            </tr>
+            <tr *ngFor='let product of myData'>
+              <td>{{product.personalDetails.firstname}}</td>
+              <td>{{product.personalDetails.lastname}}</td>
+              <td>{{product.personalDetails.email}}</td>
+              <td>{{product.personalDetails.profession}}</td>
+              <td>{{product.feedback}}</td>
+              <td>{{product.ratings}}</td>
+
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+<br />
+<app-footer></app-footer>

@@ -1,0 +1,67 @@
+[
+  {
+    "id": 101,
+    "name": "Amey",
+    "email": "Amey@gmail.com",
+    "Salary": 30000,
+    "city": "Nagpur",
+    "manImage": "../assets/m1.jfif"
+  },
+  {
+    "id": 102,
+    "name": "suresh",
+    "email": "suresh@gmail.com",
+    "Salary": 35000,
+    "city": "Hyderabad",
+    "manImage": "../assets/m2.jfif"
+  },
+  {
+    "id": 103,
+    "name": "ramesh",
+    "email": "ramesh@gmail.com",
+    "Salary": 40000,
+    "city": "Nagpur",
+    "manImage": "../assets/m3.jfif"
+  },
+  {
+    "id": 104,
+    "name": "Raju",
+    "email": "ramesh@gmail.com",
+    "Salary": 40000,
+    "city": "Nagpur",
+    "manImage": "../assets/m1.jfif"
+  },
+  {
+    "id": 105,
+    "name": "Naman",
+    "email": "naman@gmail.com",
+    "Salary": 40000,
+    "city": "Pune",
+    "manImage": "../assets/m2.jfif"
+  },
+  {
+    "id": 106,
+    "name": "Sandeep",
+    "email": "sandeep@gmail.com",
+    "Salary": 50000,
+    "city": "Nagpur",
+    "manImage": "../assets/m1.jfif"
+  },
+  {
+    "id": 107,
+    "name": "Maneet",
+    "email": "maneet@gmail.com",
+    "Salary": 40000,
+    "city": "Indore",
+    "manImage": "../assets/m1.jfif"
+  },
+  {
+    "id": 108,
+    "name": "Bhushan",
+    "email": "bhushan@gmail.com",
+    "Salary": 40000,
+    "city": "Buldhana",
+    "manImage": "../assets/m1.jfif"
+
+  }
+]

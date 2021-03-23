@@ -1,0 +1,44 @@
+<app-navigation></app-navigation>
+<h1>Employee Table works with Json</h1>
+<div class="center">
+  <input [(ngModel)]="searchText" placeholder="Search for Employees">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <label>Sort&nbsp;</label>
+  <select [(ngModel)]='SortbyParam' style="padding:5px;border-radius:10px;">
+    <option value="id">id</option>
+    <option value="name">Name</option>
+    <option value="Salary">Salary</option>
+  </select>
+  
+  &nbsp;&nbsp;
+  <button type="button" (click)="onSortDirection()" class="btn btn-primary">
+    order
+    <i *ngIf="SortDirection==='asc'" class="fas fa-arrow-up"></i>
+    <i *ngIf="SortDirection==='desc'" class="fas fa-arrow-down"></i>
+  </button>
+</div>
+<table *ngIf="employees.length!=0;else hide" class="center">
+  <tr>
+    <th>EmployeeID</th>
+    <th>EmployeeName</th>
+    <th>Email</th>
+    <th>Employee Salary</th>
+    <th>City of Residence</th>
+    <th>Image </th>
+
+  </tr>
+  <tr *ngFor='let emp of employees|search:{id: searchText, name:searchText,email: searchText}|sort:[SortbyParam,SortDirection]' appZoomd>
+    <td>{{emp.id}}</td>
+    <td>{{emp.name|titlecase}}</td>
+    <td>{{emp.email|lowercase}}</td>
+    <td>{{emp.Salary|currency:'IND':true}}</td>
+    <td>{{emp.city}}</td>
+    <td> <img [src]='emp.manImage'></td>
+
+  </tr>
+</table>
+<ng-template #hide>
+  <h1>No Employee to display</h1>
+</ng-template>
+
+<app-footer></app-footer>

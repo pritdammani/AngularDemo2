@@ -1,0 +1,93 @@
+
+<h1>Back End Technology</h1>
+
+<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="../assets/php.jfif" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="../assets/asp.jfif" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="../assets/node.jfif" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="../assets/php.jfif" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="../assets/node.jfif" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="../assets/django.jfif" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<br />
+<br />&nbsp;
+<h1></h1>
+<div class="center">
+  <input [(ngModel)]="searchText" placeholder="Search Courses">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <label>Sort&nbsp;</label>
+  <select [(ngModel)]='SortbyParam' style="padding:5px;border-radius:10px;">
+    <option value="cid">cid</option>
+    <option value="cname">Name</option>
+    <option value="cprice">Price</option>
+
+  </select>
+
+  &nbsp;&nbsp;
+  <button type="button" (click)="onSortDirection()" class="btn btn-primary">
+    order
+    <i *ngIf="SortDirection==='asc'" class="fas fa-arrow-up"></i>
+    <i *ngIf="SortDirection==='desc'" class="fas fa-arrow-down"></i>
+  </button>
+</div>
+<div class="container">
+  <table class="table table-info table-hover center">
+    <tr *ngIf="coursesBack.length!=0;else hide">
+      <th>Course ID</th>
+      <th>Logo</th>
+      <th>Course Name</th>
+
+      <th>Trainer Name </th>
+      <th>Duration in Months</th>
+      <th>Course Price </th>
+
+    </tr>
+    <tr *ngFor='let course of coursesBack|search:{cid: searchText, cname:searchText,tname: searchText}|sort:[SortbyParam,SortDirection]' appZoomd>
+      <td>{{course.cid}}</td>
+      <td> <img [src]='course.cImage'></td>
+      <td>{{course.cname|titlecase}}</td>
+      <td>{{course.tname|titlecase}}</td>
+      <td>{{course.cduration}}</td>
+      <td>{{course.cprice|currency:'AUS':true}}</td>
+
+
+
+    </tr>
+  </table>
+</div>
+<ng-template #hide>
+  <h1>No courses to display</h1>
+</ng-template>
+

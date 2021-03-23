@@ -1,0 +1,91 @@
+<app-navigation></app-navigation>
+<h1>Model Driven Form using Form Builder</h1>
+<hr style='background:blue'>
+<div class='container'>
+  <div class="row">
+    <div class="col">
+      <!-- <form #userForm='ngForm' (ngSubmit)='submitData(userForm.value)'> -->
+      <form [formGroup]="userForm" (ngSubmit)='submitData()'>
+
+
+
+        <div class='form-group'>
+          <label>Name:</label>
+          <input formControlName='name' type="text" class='form-control' placeholder="Enter name...">
+
+
+
+          <div *ngIf="userForm.get('name').hasError('required') && userForm.get('name').touched" class='text text-danger'>Name is required </div>
+          <div *ngIf="userForm.get('name').errors?.pattern" class='text text-danger'>Name should be valid and Name should be 5 to 15 characters </div>
+
+
+
+        </div>
+
+
+        <div class='form-group'>
+          <label>Email:</label>
+          <input formControlName='email' type="email" class='form-control' placeholder="Enter email...">
+
+
+
+          <div *ngIf="userForm.get('email').hasError('required') && userForm.get('email').touched" class='text text-danger'>Email is required </div>
+          <div *ngIf="userForm.get('email').errors?.pattern" class='text text-danger'>Enter valid email</div>
+
+        </div>
+        <div class="form-group" formGroupName="address">
+          <label for="">Street</label>
+          <input type="text" class="form-control" formControlName="street">
+          <div *ngIf="userForm.get('address.street').hasError('required') && userForm.get('address.street').touched" class='text text-danger'>Field is required </div>
+          <div *ngIf="userForm.get('address.street').errors?.pattern" class='text text-danger'>Enter valid street Name</div>
+
+        
+
+        
+          <label for="">city</label>
+          <input type="text" class="form-control" formControlName="city">
+          <div *ngIf="userForm.get('address.city').hasError('required') && userForm.get('address.city').touched" class='text text-danger'>Field is required </div>
+          <div *ngIf="userForm.get('address.city').errors?.pattern" class='text text-danger'>Enter valid City Name</div>
+
+        
+
+        
+          <label for="">Postal Code</label>
+          <input type="text" class="form-control" formControlName="zip">
+          <div *ngIf="userForm.get('address.zip').hasError('required') && userForm.get('address.zip').touched" class='text text-danger'>Field is required </div>
+          <div *ngIf="userForm.get('address.zip').errors?.pattern" class='text text-danger'>Enter valid Postal Code</div>
+
+        </div>
+
+
+
+        <button [disabled]='!userForm.valid' type='submit' class='btn btn-success'>Submit</button>
+
+      </form>
+    </div>
+    <div class="col">
+
+      <div class="container">
+      <table class=" table table-success table-hover center">
+        <tr *ngIf="myData.length>0;">
+          <th>Name</th>
+          <th>Email</th>
+          <th>Street</th>
+          <th>City</th>
+          <th>Postal Code</th>
+
+        </tr>
+        <tr *ngFor='let product of myData'>
+          <td>{{product.name}}</td>
+          <td>{{product.email}}</td>
+          <td>{{product.address.street}}</td>
+          <td>{{product.address.city}}</td>
+          <td>{{product.address.zip}}</td>
+
+        </tr>
+      </table>
+        </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
